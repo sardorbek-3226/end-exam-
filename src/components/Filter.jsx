@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/fitler.css"; 
+import "../css/fonts.css"; 
 
  function Filter() {
   return <div   style={{
@@ -14,7 +15,7 @@ import "../css/fitler.css";
         <label className="option">
           <input type="radio" name="time" value="0" />
           <span className="dot"></span>
-          <span className="text">0 minutes</span>
+          <span className="text">0 minutes l</span>
         </label>
 
         <label className="option">

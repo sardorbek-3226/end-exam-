@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, useActionData } from "react-router-dom";
+import Filter from "../components/Filter";
 const allProductsQuery = (queryParams) => {
   const { search, category, company, sort, price, shipping, page } =
     queryParams;
@@ -49,6 +50,7 @@ function Home() {
         <input type="text" name="age" />
         <button className="btn">button</button>
       </Form>
+      <Filter/>
     </div>
   );
 }
