@@ -1,0 +1,27 @@
+
+@import "../../css/button.css";
+@import "../../css/fonts.css";
+@import "../../css/variable.css";
+@import "../../css/fitler.css";
+
+
+.footer{
+    display: flex;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer__item{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.footer__item_element{
+    border-radius: 30px;
+}
+
+.footer__title{
+    font-size: 1.6rem;
+    color: var(--color-neutral-900);
+    font-weight: 500;
+}

@@ -1,6 +1,12 @@
 import React from "react";
 import { Form, useActionData } from "react-router-dom";
 import Filter from "../components/Filter";
+import Navbar from "../components/navbar/Navbar";
+import Header from "../components/header/Header";
+import Section1 from "../components/sections/Section1";
+import Section2 from "../components/sections/Section2";
+import Section3 from "../components/sections/Section3";
+import Footer from "../components/footer/Footer";
 const allProductsQuery = (queryParams) => {
   const { search, category, company, sort, price, shipping, page } =
     queryParams;
@@ -45,12 +51,10 @@ function Home() {
   const actionData = useActionData();
   return (
     <div>
-      <Form method="post">
-        <input type="text" name="title" />
-        <input type="text" name="age" />
-        <button className="btn">button</button>
-      </Form>
-      <Filter/>
+      <Header/>
+      <Section1/>
+      <Section2/>
+      <Section3/>
     </div>
   );
 }

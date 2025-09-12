@@ -41,3 +41,102 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.container {
+  margin: auto;
+  max-width: 144rem;
+  margin-top: 1rem;
+}
+
+.navbar {
+  border-bottom: 1px solid #e0e6e3;
+}
+.navbar__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.nav__link {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 6px;
+  color: inherit;
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 0;
+  background: #fe9f6b;
+  transition: width 0.28s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.28s ease;
+  transform-origin: left center;
+}
+.nav__link:hover::after,
+.nav__link:focus::after {
+  width: 100%;
+  transform: scaleX(1.02);
+}
+
+.button {
+  border-radius: 1rem;
+  padding: 1.2rem 1.6rem;
+  font-size: var(--fs-preset-5);
+  color: var(--color-neutral-0);
+  background-color: var(--color-neutral-900);
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  width: 855px;
+  letter-spacing: 2px;
+  line-height: 2;
+  text-align: center;
+}
+
+.info__title {
+  font-size: 6rem;
+  font: 900;
+  margin-top: 3rem;
+  color:var(--color-neutral-900);
+  letter-spacing:3px;
+}
+
+.info__title__p {
+  font-size: 2rem;
+  max-width: 680px;
+  text-align: center;
+  color:var(--color-neutral-800);
+  letter-spacing: 1px;
+}
+
+.btn__start {
+  margin-top: 4rem;
+  margin-bottom: 10rem;
+}
+
+.btn__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.span {
+  content: "";
+  height: 50%; /* pastki yarmi */
+  background: rgba(254, 159, 107, 0.4); /* hiroq rang */
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.info__image {
+  margin-bottom: 30px;
+  width: 100px;
+}
