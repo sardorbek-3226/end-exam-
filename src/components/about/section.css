@@ -1,0 +1,46 @@
+@import "../../css/button.css";
+@import "../../css/fonts.css";
+@import "../../css/variable.css";
+@import "../../css/fitler.css";
+
+
+
+.mission{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1190px;
+    margin: auto;
+    margin-top: 8rem;
+    gap: 64px;
+}
+.mission__btn{
+    background: #FE9F6B;
+    padding: 3px 9px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.mission__help{
+    color: var(--color-neutral-900);
+    font-size: 4.8rem;
+}
+.mission__health{
+    color: var(--color-neutral-800);
+    font-size: 2rem;
+}
+.mission__we{
+    color: var(--color-neutral-800);
+    font-size: 2rem;
+}
+.mission__img{
+    border-radius:15px;
+    width: 800px;
+}
+
+@media (max-width: 998px) {
+    .mission{
+        flex-direction: column;
+    }
+  }

@@ -1,0 +1,66 @@
+.ParentBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    gap: 3rem;
+  }
+  
+  .box {
+    width: 520px;
+    flex: 1 1 100%;
+  }
+  
+  .box__title {
+    font-size: 2.8rem; 
+    color: var(--color-neutral-900);
+    font-weight: 800;
+    margin-bottom: 2rem;
+  }
+  
+  .box__p,
+  .box__p2 {
+    margin-bottom: 2rem;
+    font-size: 1.6rem; 
+    color: var(--color-neutral-800);
+    font-weight: 700;
+    line-height: 1.6;
+  }
+  
+  .box__img {
+    border-radius: 2rem;
+    width: 650px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 768px) {
+    .ParentBox {
+      flex-wrap: wrap; 
+    }
+  
+    .box {
+      flex: 1 1 50%;
+    }
+  
+    .box__title {
+      font-size: 3.6rem;
+    }
+  
+    .box__p,
+    .box__p2 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .box__title {
+      font-size: 4.8rem;
+    }
+    .box__p,
+    .box__p2 {
+      font-size: 2rem;
+    }
+  }
+  
+  

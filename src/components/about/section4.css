@@ -1,0 +1,99 @@
+.parent {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .div {
+    background-color: #E9EDE8;
+    width: 100%;
+    max-width: 1252px;
+    margin: 30px auto;
+    min-height: 250px;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    background-image: url("/images/pattern-fork.svg"), url("/images/pattern-knife.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left -40px top 40px, right -40px top 40px;
+    background-size: 250px, 250px;
+  }
+  
+  .knife {
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .knife__title {
+    font-weight: 800;
+    font-size: 2.4rem;
+    color: var(--color-neutral-900);
+    margin-bottom: 1rem;
+  }
+  
+  .knife__p {
+    font-size: 1.4rem;
+    color: var(--color-neutral-800);
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .knife__btn {
+    border-radius: 1rem;
+    padding: 1.2rem 1.6rem;
+    font-size: var(--fs-preset-5);
+    color: var(--color-neutral-0);
+    background-color: var(--color-neutral-900);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .knife__btn:hover {
+    background-color: var(--color-neutral-800);
+  }
+  
+  @media (max-width: 550px) {
+    .div {
+      background-image: none; 
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .knife__title {
+      font-size: 3.6rem;
+    }
+  
+    .knife__p {
+      font-size: 1.6rem;
+    }
+  
+    .knife__btn {
+      font-size: 1.6rem;
+      padding: 1.2rem 2.4rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .div {
+      padding: 4rem;
+      min-height: 350px;
+    }
+  
+    .knife__title {
+      font-size: 4.8rem;
+    }
+  
+    .knife__p {
+      font-size: 2rem;
+    }
+  
+    .knife__btn {
+      font-size: 1.8rem;
+      padding: 1.4rem 3rem;
+    }
+  }
+  

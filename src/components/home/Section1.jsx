@@ -9,7 +9,7 @@ const Sections1 = () => {
 
         <div className='card'>
           <div className='card__item'>
-            <img className='card__img' src="https://picsum.photos/60/60?random=1" alt="" />
+            <img className='card__img1' src="/images/icon-whole-food-recipes.svg" alt="" />
             <h3 className='card__title'>Whole-food recipes</h3>
             <p className='card__p'>Each dish uses everyday, unprocessed ingredients.</p>
           </div>
@@ -17,7 +17,7 @@ const Sections1 = () => {
 
         <div className='card'>
           <div className='card__item'>
-            <img className='card__img' src="https://picsum.photos/60/60?random=2" alt="" />
+            <img className='card__img' src="/images/icon-minimum-fuss.svg" alt="" />
             <h3 className='card__title'>Minimum fuss</h3>
             <p className='card__p'>All recipes are designed to make eating healthy quick and easy.</p>
           </div>
@@ -25,7 +25,7 @@ const Sections1 = () => {
 
         <div className='card'>
           <div className='card__item'>
-            <img className='card__img' src="https://picsum.photos/60/60?random=3" alt="" />
+            <img className='card__img' src="/images/icon-search-in-seconds.svg" alt="" />
             <h3 className='card__title'>Search in seconds</h3>
             <p className='card__p'>Filter by name or ingredient and jump straight to the recipe you need.</p>
           </div>

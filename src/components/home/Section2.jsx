@@ -9,7 +9,7 @@ const Section2 = () => {
         <p className='box__p2'>Whether you’re new to the kitchen or just need fresh ideas, we’ve got you covered.</p>
       </div>
       <div>
-        <img className='box__img' src="https://picsum.photos/635/450" alt="" />
+        <img className='box__img' src="/images/image-home-real-life-large.webp" alt="" />
       </div>
     </div>
   )

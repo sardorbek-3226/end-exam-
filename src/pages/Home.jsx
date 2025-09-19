@@ -1,12 +1,9 @@
 import React from "react";
 import { Form, useActionData } from "react-router-dom";
-import Filter from "../components/Filter";
-import Navbar from "../components/navbar/Navbar";
 import Header from "../components/header/Header";
-import Section1 from "../components/sections/Section1";
-import Section2 from "../components/sections/Section2";
-import Section3 from "../components/sections/Section3";
-import Footer from "../components/footer/Footer";
+import Section1 from "../components/home/Section1";
+import Section2 from "../components/home/Section2";
+import Section3 from "../components/home/Section3";
 const allProductsQuery = (queryParams) => {
   const { search, category, company, sort, price, shipping, page } =
     queryParams;

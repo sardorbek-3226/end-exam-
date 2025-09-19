@@ -1,0 +1,16 @@
+.time-select {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .time-select:focus {
+    border-color: purple;
+    box-shadow: 0 0 4px rgba(128, 0, 128, 0.4);
+  }
+  

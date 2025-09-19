@@ -1,23 +1,59 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { useState } from "react";
+import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  return (
-    <div className='navbar'>
-      <div className='container navbar__list'>
-      <div className='logo' style={{display:"flex", alignItems:"center", gap:"10px"}}>
-        <img src="https://picsum.photos/50/50" alt="logo" style={{borderRadius:"50%"}}/>
-        <h4 style={{fontSize:"2rem", font:"semiBold", }}>Healthy Recipe Finder</h4>
-      </div>
-      <ul className='nav' style={{display:"flex", alignItems:"center", gap:"4rem", font:"600", fontSize:"18px"}}>
-        <li className='nav__link'><Link to="/">Home</Link></li>
-        <li className='nav__link'><Link to="/about">About</Link></li>
-        <li className='nav__link'><Link to="/receipes">Recipes</Link></li>
-      </ul>
-      <button className='btn button'>Browse recipes</button>
-    </div>
-    </div>
-  )
-}
+  const [menuOpen, setMenuOpen] = useState(false);
 
-export default Navbar
+  return (
+    <nav className="navbar">
+      <div className="navbar__inner">
+        <div className="navbar__logo"><img src="/images/logo.svg" alt="" /></div>
+
+        <ul className="navbar__links">
+          <li><Link to="/" className="nav__link">Home</Link></li>
+          <li><Link to="/about" className="nav__link">About</Link></li>
+          <li><Link to="/receipes" className="nav__link">Receipes</Link></li>
+        </ul>
+
+        <button
+          className="center-menu"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 6h18M3 12h18M3 18h18"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
+        </button>
+
+        <div className="navbar__cta">
+          <button className="btn">Browse recipes</button>
+        </div>
+      </div>
+
+      {menuOpen && (
+        <div className="mobile-panel">
+          <ul className="mobile-links">
+          <li><Link to="/" className="nav__link">Home</Link></li>
+          <li><Link to="/about" className="nav__link">About</Link></li>
+          <li><Link to="/receipes" className="nav__link">Receipes</Link></li>
+            <li><button className="btn mobile-button"> Browse recipes</button></li>
+          </ul>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;

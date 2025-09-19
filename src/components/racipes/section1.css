@@ -1,0 +1,22 @@
+.explore{
+    text-align: center;
+    max-width: 1192px;
+    margin: auto;
+    margin-top: 6rem;
+}
+.explore__p{
+    max-width: 664px;
+    margin: auto;
+    color: var(--color-neutral-800);
+    font-size: 1.7rem;
+}
+.explore__title{
+    color: var(--color-neutral-900);
+    font-size: 4rem;
+}
+
+@media (max-width:768px) {
+    .explore{
+        text-align: start;
+    }
+}
