@@ -187,7 +187,7 @@ function Section3() {
                   className="delete-btn"
                   onClick={() => handleDelete(idx)}
                 >
-                  Delete
+                  ✖️
                 </button>
               </div>
             </div>

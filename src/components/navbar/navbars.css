@@ -121,7 +121,6 @@
     border: none;
   }
   
-  /* ======= Responsive ======= */
   @media (max-width: 768px) {
     .navbar__links {
       display: none;

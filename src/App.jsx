@@ -18,10 +18,7 @@ function App() {
           path: "/about",
           element: <About />,
         },
-        {
-          path: "/receipe/:id",
-          element: <Recipe />,
-        },
+        
         {
           path: "/receipes",
           element: <Recipes />,

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-
+import "./filter.css"
 function CustomSelect({ options, placeholder = "Select" }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("");
@@ -20,7 +20,7 @@ function CustomSelect({ options, placeholder = "Select" }) {
       style={{ position: "relative", width: "200px", fontFamily: "Arial, sans-serif" }}
       ref={containerRef}
     >
-      <div
+      <div className="inp"
         style={{
           width: "100%",
           padding: "10px 12px",
@@ -120,34 +120,28 @@ export default function App() {
     { label: "15 minutes", value: "15" },
   ];
 
-  // Mock data (misol uchun 5 ta)
   const recipes = [
+  
   ];
 
-  // Qidiruv filter
-  const filteredRecipes = recipes.filter(
-    (r) =>
-      r.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      r.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredRecipes = recipes.filter((r) => {
+    const lowerSearch = searchTerm.toLowerCase();
+    return (
+      r.title.toLowerCase().includes(lowerSearch) ||
+      r.description.toLowerCase().includes(lowerSearch)
+    );
+  });
 
   return (
     <div style={{ padding: "20px", backgroundColor: "#f5f5f5" }}>
-      {/* Filter panel */}
       <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: "20px",
-        }}
+        className="input"
       >
-        <div style={{ display: "flex", alignItems: "center", gap: "30px" }}>
+        <div className="custom">
           <CustomSelect options={prepOptions} placeholder="Max Prep Time" />
           <CustomSelect options={cookOptions} placeholder="Max Cook Time" />
         </div>
 
-        {/* Search input */}
         <input
           type="text"
           placeholder="Search by name or ingredient…"
@@ -174,7 +168,6 @@ export default function App() {
         />
       </div>
 
-      {/* Recipes list */}
       <div style={{ display: "grid", gap: "16px" }}>
         {filteredRecipes.length > 0 ? (
           filteredRecipes.map((r) => (

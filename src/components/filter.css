@@ -1,16 +1,48 @@
 .time-select {
-    display: block;
-    margin-top: 0.5rem;
-    padding: 0.4rem 0.6rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    outline: none;
-    cursor: pointer;
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.custom{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.input{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+}
+.time-select:focus {
+  border-color: purple;
+  box-shadow: 0 0 4px rgba(128, 0, 128, 0.4);
+}
+
+@media (max-width: 768px) {
+  .time-select {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.95rem;
+  }
+  .input{
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .time-select {
+    padding: 0.3rem 0.4rem;
+    font-size: 0.9rem;
+  }
+  .custom{
+    flex-direction: column;
   }
   
-  .time-select:focus {
-    border-color: purple;
-    box-shadow: 0 0 4px rgba(128, 0, 128, 0.4);
-  }
-  
+}
