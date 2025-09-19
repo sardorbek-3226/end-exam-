@@ -106,7 +106,8 @@
 .cook-container {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
+
 }
 
 .buttons {

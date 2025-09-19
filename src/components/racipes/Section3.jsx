@@ -12,7 +12,6 @@ function Section3() {
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // LocalStorage’dan olish
   useEffect(() => {
     const saved = localStorage.getItem("recipes");
     if (saved) {
@@ -24,7 +23,6 @@ function Section3() {
     localStorage.setItem("recipes", JSON.stringify(data));
   };
 
-  // input change
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     if (name === "file") {
@@ -34,11 +32,9 @@ function Section3() {
     }
   };
 
-  // qo‘shish
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Fayldan vaqtinchalik URL olish
     const imageUrl = formData.file
       ? URL.createObjectURL(formData.file)
       : "/images/default.png";
@@ -56,7 +52,6 @@ function Section3() {
     setRecipes(updatedRecipes);
     saveToLocal(updatedRecipes);
 
-    // formani tozalash
     setFormData({
       title: "",
       overwiev: "",
@@ -68,7 +63,6 @@ function Section3() {
     setIsModalOpen(false);
   };
 
-  // delete qilish
   const handleDelete = (index) => {
     const updated = recipes.filter((_, i) => i !== index);
     setRecipes(updated);
@@ -77,15 +71,12 @@ function Section3() {
 
   return (
     <div className="section3">
-      {/* 🔹 Modal ochuvchi button */}
       <button
         className="btn open-modal-btn"
         onClick={() => setIsModalOpen(true)}
       >
         Ma’lumot qo‘shish
       </button>
-
-      {/* 🔹 Modal */}
       {isModalOpen && (
         <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
@@ -150,8 +141,6 @@ function Section3() {
           </div>
         </div>
       )}
-
-      {/* 🔹 Recipe list */}
       <div className="recipes-container">
         {recipes.map((recipe, idx) => (
           <div className="recipe-item" key={idx}>
